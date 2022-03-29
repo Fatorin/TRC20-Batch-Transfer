@@ -13,7 +13,7 @@ const tronWeb = new TronWeb(mainNode, mainNode, mainNode, privateKey)
 const ContractAddress = "YOUR_TRC20_TOKEN_CONTRACT_ADDRESS";
 
 //If work on mainNode, your need apply API KEY from https://www.trongrid.io/
-//tronWeb.setHeader({"TRON-PRO-API-KEY": '70537c6f-d320-43b3-abae-0e061fbda920'});
+//tronWeb.setHeader({"TRON-PRO-API-KEY": 'YOUR_TRON_PRO_API_KEY'});
 
 class TransferForm extends React.Component {
     constructor(props) {
