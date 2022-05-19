@@ -75,7 +75,8 @@ class TransferForm extends React.Component {
         try {
             for (let index = 0; index < datas.length; index++) {
                 let data = datas[index].split(/,/);
-                let transferCount = new BigNumber(1000000000000000000 * data[1]).toFixed();
+                let amonut = new BigNumber(data[1]);
+                let transferCount = new BigNumber(1000000000000000000).multipliedBy(amonut).toFixed();
                 await this.delay(1);
                 //const resp = await this.state.instance.methods.transfer(data[0], data[1]).send({ shouldPollResponse: true });
                 const resp = await this.state.instance.methods.transfer(data[0], transferCount).send();
